@@ -6,8 +6,8 @@ services:
   - docker
 
 before_install:
-  - echo "start creating an image with dockerfile"
-  - docker build -t sangwondockerhub/docker-react-app -f Dockerfile .
+  - echo "start creating an image with dockerfile !"
+  - docker build -t sangwondockerhub/docker-react-app -f Dockerfile.dev .
 script:
   - docker run -e CI=true sangwondockerhub/docker-react-app npm run test -- -- coverage
 
